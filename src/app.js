@@ -5,14 +5,14 @@ const app = express();
 
 app.get("/getUserData",(req,res)=>{
     //logic of DB call and get user data
-
+    throw new Error("asdjaksjdnasnd");
     res.send("User data sent");
 });
 
 app.use("/",(err,req,res,next)=>{
     if(err){
         //Log the error
-        
+
         res.status(500).send("Oops! Something went wrong!");
     }
 })
